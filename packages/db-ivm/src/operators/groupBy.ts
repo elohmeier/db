@@ -50,7 +50,7 @@ export function groupBy<
     ),
   ) as Record<string, BasicAggregateFunction<T, any, any>>
 
-  // @ts-expect-error - TODO: we don't use this yet, but we will
+  // Keep for upcoming pipe-based aggregate support.
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pipedAggregates = Object.fromEntries(
     Object.entries(aggregates).filter(([_, aggregate]) =>
